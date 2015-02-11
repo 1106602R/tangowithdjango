@@ -30,6 +30,8 @@ TEMPLATE_DIRS = [TEMPLATE_PATH,]
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = '/rango/login/'
+
 
 # Application definition
 
