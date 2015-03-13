@@ -24,6 +24,15 @@ SECRET_KEY = 's=tw8ez2(ieh^(f*q)=t$_p=w6d82b2kwcoaqmhzhz-6gf8cte'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+REGISTRATION_OPEN = True                # If True, users can register
+ACCOUNT_ACTIVATION_DAYS = 7     # One-week activation window; you may, of course, use a different value.
+REGISTRATION_AUTO_LOGIN = True  # If True, the user will be automatically logged in.
+LOGIN_REDIRECT_URL = '/rango/'  # The page you want users to arrive at after they successful log in
+LOGIN_URL = '/accounts/login/'  # The page users are directed to if they are not logged in,
+                                # and are trying to access pages requiring authentication
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
 TEMPLATE_DEBUG = True
 
 TEMPLATE_DIRS = [TEMPLATE_PATH,]
@@ -36,13 +45,15 @@ LOGIN_URL = '/rango/login/'
 # Application definition
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'rango',	
+'django.contrib.admin',
+'django.contrib.auth',
+'django.contrib.contenttypes',
+'django.contrib.sessions',
+'django.contrib.messages',
+'django.contrib.staticfiles',
+'rango',
+'registration',
+'bootstrap_toolkit',
 )
 
 MIDDLEWARE_CLASSES = (
